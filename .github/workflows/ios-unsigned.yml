@@ -1,0 +1,53 @@
+# Mẫu workflow: biên dịch project Xcode do Unity xuất thành .ipa CHƯA KÝ.
+# IosBuildPipeline tự chép file này vào Builds/iOS/.github/workflows/.
+# Ký lại bằng Sideloadly/AltStore + Apple ID miễn phí trên Windows.
+name: ios-unsigned
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode version
+        run: xcodebuild -version
+
+      - name: Pod install (chỉ khi project có Podfile)
+        working-directory: Xcode
+        run: |
+          if [ -f Podfile ]; then pod install; fi
+
+      - name: Build unsigned app
+        working-directory: Xcode
+        run: |
+          if [ -d Unity-iPhone.xcworkspace ]; then
+            TARGET=(-workspace Unity-iPhone.xcworkspace)
+          else
+            TARGET=(-project Unity-iPhone.xcodeproj)
+          fi
+          xcodebuild "${TARGET[@]}" -scheme Unity-iPhone \
+            -configuration Release -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath ../build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package ipa
+        run: |
+          APP=$(find build/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' | head -n 1)
+          echo "App: $APP"
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -qry IdleGo.ipa Payload
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: IdleGo-ipa
+          path: IdleGo.ipa
+          retention-days: 7

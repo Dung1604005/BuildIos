@@ -1,0 +1,96 @@
+<linker>
+  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="AoeAttackMelee" preserve="all" />
+    <type fullname="AoeAttackSpawn" preserve="all" />
+    <type fullname="AttackProjectile" preserve="all" />
+    <type fullname="AutoCombat" preserve="all" />
+    <type fullname="BuffSkill" preserve="all" />
+    <type fullname="BuffVisual" preserve="all" />
+    <type fullname="CharacterAnimationEvent" preserve="all" />
+    <type fullname="CharacterCombatSO" preserve="all" />
+    <type fullname="CharacterDataSO" preserve="all" />
+    <type fullname="CharacterHealthBar" preserve="all" />
+    <type fullname="CharacterStatProgressSO" preserve="all" />
+    <type fullname="CharacterStatSO" preserve="all" />
+    <type fullname="DamageFlash" preserve="all" />
+    <type fullname="DamageSkill" preserve="all" />
+    <type fullname="EnchantMaterialDataSO" preserve="all" />
+    <type fullname="EnchantMaterialSourceSO" preserve="all" />
+    <type fullname="Enemy" preserve="all" />
+    <type fullname="EnemyDataSO" preserve="all" />
+    <type fullname="EquipmentDataSO" preserve="all" />
+    <type fullname="EquipmentSourceSO" preserve="all" />
+    <type fullname="FishDataSO" preserve="all" />
+    <type fullname="FishingCatalogSO" preserve="all" />
+    <type fullname="FishingGearSO" preserve="all" />
+    <type fullname="FishingIslandSO" preserve="all" />
+    <type fullname="HealSkill" preserve="all" />
+    <type fullname="ItemDatabaseSO" preserve="all" />
+    <type fullname="ItemSO" preserve="all" />
+    <type fullname="ItemSourceSO" preserve="all" />
+    <type fullname="LevelDataSO" preserve="all" />
+    <type fullname="MiscSourceSO" preserve="all" />
+    <type fullname="Player" preserve="all" />
+    <type fullname="SingleAttackMelee" preserve="all" />
+    <type fullname="SingleAttackSpawn" preserve="all" />
+    <type fullname="SpreadAttackSpawn" preserve="all" />
+    <type fullname="SpriteFlipbook" preserve="all" />
+    <type fullname="StatusEffectView" preserve="all" />
+    <type fullname="StatusIconBar" preserve="all" />
+    <type fullname="SummonSkill" preserve="all" />
+    <type fullname="UnlockRevealStepSO" preserve="all" />
+    <type fullname="UnlockRevealTierSO" preserve="all" />
+    <type fullname="CharacterCombat" preserve="nothing" serialized="true" />
+    <type fullname="CharacterEquipment" preserve="nothing" serialized="true" />
+    <type fullname="CharacterMovement" preserve="nothing" serialized="true" />
+    <type fullname="CharacterSkillProgress" preserve="nothing" serialized="true" />
+    <type fullname="CharacterStat" preserve="nothing" serialized="true" />
+    <type fullname="CharacterStatProgress" preserve="nothing" serialized="true" />
+    <type fullname="CharacterStatRuleHistory" preserve="nothing" serialized="true" />
+    <type fullname="CharacterStatUpgradeRule" preserve="nothing" serialized="true" />
+    <type fullname="CharacterStatusEffects" preserve="nothing" serialized="true" />
+    <type fullname="EquipmentData" preserve="nothing" serialized="true" />
+    <type fullname="UnlockRevealPose" preserve="nothing" serialized="true" />
+    <type fullname="BuffStatEntry" preserve="nothing" serialized="true" />
+    <type fullname="StatValue" preserve="nothing" serialized="true" />
+    <type fullname="FishRarityCost" preserve="nothing" serialized="true" />
+    <type fullname="FishingGearStage" preserve="nothing" serialized="true" />
+    <type fullname="FishingGearStat" preserve="nothing" serialized="true" />
+    <type fullname="FishingReward" preserve="nothing" serialized="true" />
+    <type fullname="EnemyElementTraits" preserve="nothing" serialized="true" />
+    <type fullname="EquipmentDropEntry" preserve="nothing" serialized="true" />
+    <type fullname="StackItemDropEntry" preserve="nothing" serialized="true" />
+    <type fullname="WaveData" preserve="nothing" serialized="true" />
+    <type fullname="WaveEnemyData" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AtlasSpriteProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.IAssetBundleResource" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.AnimationClip" preserve="all" />
+    <type fullname="UnityEngine.Animator" preserve="all" />
+    <type fullname="UnityEngine.RuntimeAnimatorController" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.SpriteRenderer" preserve="all" />
+    <type fullname="UnityEngine.Texture2D" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.BoxCollider2D" preserve="all" />
+  </assembly>
+</linker>
