@@ -18,6 +18,20 @@ jobs:
       - name: Xcode version
         run: xcodebuild -version
 
+      # IosBuildLargeFiles nén file > 50 MB thành <file>.gzpart000, 001, ... (GitHub chặn file > 100 MB): ghép và giải nén lại.
+      - name: Unpack large files
+        run: |
+          find Xcode -name '*.gzpart000' | while IFS= read -r first; do
+            base="${first%.gzpart000}"
+            cat "$base".gzpart* | gunzip > "$base"
+            rm "$base".gzpart*
+          done
+
+      # Windows không lưu quyền chạy; trả lại cho script và công cụ Unity đặt trong project.
+      - name: Restore executable bits
+        run: |
+          find Xcode -maxdepth 1 -type f \( -name '*.sh' -o -name 'usymtool*' \) -exec chmod +x {} +
+
       - name: Pod install (chỉ khi project có Podfile)
         working-directory: Xcode
         run: |
